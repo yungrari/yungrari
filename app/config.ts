@@ -12,7 +12,7 @@ export default {
         {
           year: "2023",
           title: "EBRAINS CoCreate AI Art",
-          link: "https://ebrains.ai/",
+          link: "https://ebrains.ai",
           content: "A 3D web application showcasing the fusion of design and neuroscience, highlighting the potential of Trustworthy AI in sustainable development.",
         },
       ]
@@ -60,7 +60,7 @@ export default {
         },
         {
           year: "2016",
-          title: "isual Communication at SVC",
+          title: "Design at SVC",
           link: "https://analytics.google.com/analytics/academy/",
         }
       ],

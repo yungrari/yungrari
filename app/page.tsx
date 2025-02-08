@@ -12,8 +12,8 @@ export default function Home() {
       <main className="flex flex-col gap-9 font-[family-name:var(--font-geist-sans)] max-w-[var(--max-w)] mx-auto pt-[var(--pt)] pb-[var(--pb)] px-[var(--px)]">
         <header className="grid grid-cols-[92px_1fr] gap-x-4">
           <User />
-          <h1 className="col-[2/3] self-end">Dan Martynov</h1>
-          <h2 className="col-[2/3] self-start text-[var(--grey2)]">Design Engineer</h2>
+          <h1 className="col-[2/3] self-end">{config.title}</h1>
+          <h2 className="col-[2/3] self-start text-[var(--grey2)]">{config.description}</h2>
         </header>
 
         <article className="flex flex-col gap-15">
@@ -71,7 +71,7 @@ export default function Home() {
         </article>
       </main>
 
-      <footer className="font-[family-name:var(--font-geist-mono)] uppercase border-t-1 border-[var(--grey3)] text-[12px] text-[var(--grey3)] opacity-50">
+      <footer className="font-[family-name:var(--font-geist-mono)] uppercase border-t-1 border-neutral-200 dark:border-neutral-800 text-[var(--grey3)] opacity-50">
         <Footer />
       </footer>
     </>
