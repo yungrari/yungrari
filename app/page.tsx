@@ -10,11 +10,11 @@ export default function Home() {
       <div className="flex flex-col font-[family-name:var(--font-geist-sans)] max-w-[var(--max-w)] mx-auto pt-[var(--pt)] pb-[var(--pb)] px-[var(--px)]">
         <header className="grid grid-cols-[92px_1fr] gap-x-4 mb-9">
           <User />
-          <h1 className="col-[2/3] self-end text-[18px]">Dan Martynov</h1>
-          <h2 className="col-[2/3] self-start text-[15px] text-[var(--grey2)]">Design Engineer</h2>
+          <h1 className="col-[2/3] self-end">Dan Martynov</h1>
+          <h2 className="col-[2/3] self-start text-[var(--grey2)]">Design Engineer</h2>
         </header>
 
-        <main className="text-[15px] leading-[1.6]">
+        <main>
           <section className="mb-12">
             <h3 className="mb-3">About</h3>
             <p className="text-[var(--grey2)]">

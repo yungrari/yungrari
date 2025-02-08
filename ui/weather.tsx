@@ -1,36 +1,39 @@
-async function getWeather({ 
-  latitude, 
-  longitude
-}: { 
-  latitude: string, 
-  longitude: string 
-}) {
-  try {
-    const response = await fetch(
-      `https://api.open-meteo.com/v1/forecast?latitude=${latitude || 52.52}&longitude=${longitude || 14.14}&current=temperature_2m,weather_code`
-    )
-    const data = await response.json()
+'use client'
 
-    return `${Math.round(data.current.temperature_2m)}${data.current_units.temperature_2m}`
-  } catch (error) {
-    console.error(error)
+import { useEffect, useState } from "react"
 
-    return ''
-  }
-}
+export default function Weather() {
+  const [weather, setWeather] = useState('')
 
-export default async function Weather({ 
-  latitude, 
-  longitude 
-}: { 
-  latitude: string, 
-  longitude: string 
-}) {
-  const weather = await getWeather({ latitude, longitude })
+  useEffect(() => {
+    async function getWeather() {
+      const cookies = document.cookie.split("; ");
 
-  if (!weather) {
-    return null
-  }
+      const latitude = cookies.find((cookie) => cookie.startsWith("latitude="))?.split("=")[1];
+      const longitude = cookies.find((cookie) => cookie.startsWith("longitude="))?.split("=")[1];
+
+      console.log({ latitude, longitude })
+
+      if (!latitude || !longitude) {
+        return setWeather('N/A')
+      }
+
+      try {
+        const response = await fetch(
+          `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code`
+        )
+        const data = await response.json()
+    
+        setWeather(`${Math.round(data.current.temperature_2m)}${data.current_units.temperature_2m}`)
+      } catch (error) {
+        console.error(error)
+    
+        setWeather('ERROR')
+      }
+    }
+
+    getWeather()
+  }, [])
 
   return (
     <section className="flex items-center gap-2">

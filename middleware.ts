@@ -6,16 +6,12 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.next()
   const geo = geolocation(request)
 
-  if (geo.city) {
-    response.headers.set('x-geo-city', geo.city)
-  }
-
   if (geo.latitude) {
-    response.headers.set('x-geo-latitude', geo.latitude)
+    response.cookies.set('latitude', geo.latitude)
   }
 
   if (geo.longitude) {
-    response.headers.set('x-geo-longitude', geo.longitude)
+    response.cookies.set('longitude', geo.longitude)
   }
 
   return response
