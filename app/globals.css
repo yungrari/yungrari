@@ -10,7 +10,8 @@
   --pb: 96px;
   --px: 24px;
   --max-w: 588px;
-  --font-size: 16px;
+  --font-size: 15px;
+  --line-height: 1.6;
 
   --grey1: #111;
   --grey2: #555;
@@ -24,6 +25,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --grey1: #eee;
+    --grey2: #bbb;
+    --grey3: #888;
+    --wash1: #4e4e4e;
+    --wash2: #383838;
+
     --background: #222;
     --foreground: #eee;
   }
@@ -38,6 +45,7 @@
 
 body {
   font-size: var(--font-size);
+  line-height: var(--line-height);
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
