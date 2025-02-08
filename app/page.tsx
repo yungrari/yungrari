@@ -1,32 +1,50 @@
 import Footer from "@/ui/footer";
 import Blur from "@/ui/blur";
+import User from "@/ui/user";
 
 export default function Home() {
   return (
     <>
       <Blur />
 
-      <div className="flex flex-col font-[family-name:var(--font-geist-sans)] max-w-[540px] mx-auto px-6 [padding:clamp(48px,calc((100vw-540px)/2),72px)_0]">
+      <div className="flex flex-col font-[family-name:var(--font-geist-sans)] max-w-[var(--max-w)] mx-auto pt-[var(--pt)] pb-[var(--pb)] px-[var(--px)]">
         <header className="grid grid-cols-[92px_1fr] gap-x-4 mb-9">
-          <div className="row-[1/3] size-[92px] rounded-full bg-radial-[at_25%_25%] from-white to-neutral-400 to-75%" />
+          <User />
           <h1 className="col-[2/3] self-end text-[18px]">Dan Martynov</h1>
-          <h2 className="col-[2/3] self-start text-[15px]">Design Engineer</h2>
+          <h2 className="col-[2/3] self-start text-[15px] text-[var(--grey2)]">Design Engineer</h2>
         </header>
 
-        <main className="text-[15px]">
-          <section>
-            <h3>About</h3>
-            <p>
+        <main className="text-[15px] leading-[1.6]">
+          <section className="mb-12">
+            <h3 className="mb-3">About</h3>
+            <p className="text-[var(--grey2)]">
               {/* I bridge engineering approach with visual aesthetics.  */}
               All I want to do is build websites.
               {/* Thinking about performance, architecture, and how things feel. */}
             </p>
           </section>
 
-          <br />
+          <section className="mb-12">
+            <h3 className="mb-6">Projects</h3>
 
-          <section>
-            <h3>Projects</h3>
+            <p className="text-[var(--grey3)]">2023</p>
+
+            <a
+              className="flex items-center gap-1 hover:underline hover:underline-offset-4"
+              href="https://ebrains.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>EBRAINS CoCreate AI Art</span>
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
+              </svg>
+            </a>
+
+            <p className="text-[var(--grey2)]">
+              A 3D web application showcasing the fusion of design and neuroscience, 
+              highlighting the potential of Trustworthy AI in sustainable development.
+            </p>
 
             {/* <h4>HARNA</h4>
             <p>
@@ -40,41 +58,43 @@ export default function Home() {
               Developed engaging upsell mechanics post-purchase, 
               leveraging React and TypeScript to create a smooth user journey.
             </p> */}
-
-            <h4>EBRAINS CoCreate AI Art</h4>
-            <p>
-              A 3D web application showcasing the fusion of design and neuroscience, 
-              highlighting the potential of Trustworthy AI in sustainable development.
-            </p>
           </section>
 
           <br />
 
-          <section>
-            <h3>Experience</h3>
+          <section className="mb-12">
+            <h3 className="mb-6">Experience</h3>
+
+            <p className="text-[var(--grey3)]">2021 – Present</p>
+
+            <a
+              className="flex items-center gap-1 hover:underline hover:underline-offset-4"
+              href="https://ebrains.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Software Engineer at AMO</span>
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
+              </svg>
+            </a>
             
-            <h4>Software Engineer at AMO</h4>
-            <p>2021 – Present</p>
-            <ul>
+            <ul className="text-[var(--grey2)] mb-9">
               <li>Architected complex web applications using Next.js and TypeScript.</li>
               <li>Streamlined feature delivery and improved testing workflows, fostering a collaborative environment.</li>
               <li>Mentored developers, emphasizing best practices in coding and design.</li>
             </ul>
 
-            <br />
-
+            <p className="text-[var(--grey3)]">2020 – 2021</p>
             <h4>Software Engineer at IWIS</h4>
-            <p>2020 – 2021</p>
-            <ul>
+            <ul className="text-[var(--grey2)] mb-9">
               <li>Developed single-page applications with React and Redux, focusing on performance and user experience.</li>
               <li>Enhanced SEO strategies through server-side rendering with Next.js.</li>
             </ul>
 
-            <br />
-
+            <p className="text-[var(--grey3)]">2017 – 2019</p>
             <h4>Designer at GALAGAN</h4>
-            <p>2017 – 2019</p>
-            <ul>
+            <ul className="text-[var(--grey2)] mb-9">
               <li>Collaborated with designers to create responsive web components, ensuring visual harmony across platforms.</li>
             </ul>
           </section>
@@ -137,36 +157,7 @@ export default function Home() {
         </main> */}
 
         {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/file.svg"
-              alt="File icon"
-              width={16}
-              height={16}
-            />
-            Learn
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/window.svg"
-              alt="Window icon"
-              width={16}
-              height={16}
-            />
-            Examples
-          </a>
+          
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -185,7 +176,9 @@ export default function Home() {
         </footer> */}
       </div>
 
-      <Footer />
+      <footer className="font-[family-name:var(--font-geist-mono)] uppercase border-t-1 border-neutral-100 text-[11px] text-neutral-400">
+        <Footer />
+      </footer>
     </>
   );
 }

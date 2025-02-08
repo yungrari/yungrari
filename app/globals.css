@@ -6,14 +6,32 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --pt: 48px;
+  --pb: 96px;
+  --px: 24px;
+  --max-w: 588px;
+
+  --grey1: #111;
+  --grey2: #555;
+  --grey3: #999;
+  --wash1: #e5e5e5;
+  --wash2: #f2f2f2;
+
+  --background: #fff;
+  --foreground: #111;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #222;
     --foreground: #eee;
+  }
+}
+
+@media (min-width: 640px) {
+  :root {
+    --pt: 72px;
+    --pb: 144px;
   }
 }
 

@@ -1,20 +1,20 @@
 export default function Blur() {
   return (
     <div
-      aria-hidden="true"
+      aria-hidden
       className="
         select-none 
         pointer-events-none 
         fixed
-        w-screen
-        h-24
+        w-full
+        h-[var(--pt)]
         z-1
         backdrop-blur-[5px]
         opacity-95
-        [mask-image:linear-gradient(to_bottom,#000_25%,transparent)]
+        [mask-image:linear-gradient(to_bottom,var(--foreground)_25%,transparent)]
         after:absolute
         after:inset-0
-        after:bg-[linear-gradient(to_bottom,#fff,transparent)]
+        after:bg-[linear-gradient(to_bottom,var(--background),transparent)]
       " 
     />
   )
