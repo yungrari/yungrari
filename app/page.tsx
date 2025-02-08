@@ -6,9 +6,9 @@ export default function Home() {
     <>
       <Blur />
 
-      <div className="flex flex-col font-[family-name:var(--font-geist-sans)] max-w-[540px] mx-auto [padding:clamp(24px,calc((100vw-540px)/2),72px)_0]">
+      <div className="flex flex-col font-[family-name:var(--font-geist-sans)] max-w-[540px] mx-auto px-4 [padding:clamp(24px,calc((100vw-540px)/2),72px)_0]">
         <header className="grid grid-cols-[92px_1fr] gap-x-4 mb-9">
-          <div className="row-[1/3] size-[92px] rounded-full bg-radial-[at_25%_25%] from-white to-neutral-500 to-75%" />
+          <div className="row-[1/3] size-[92px] rounded-full bg-radial-[at_25%_25%] from-white to-neutral-400 to-75%" />
           <h1 className="col-[2/3] self-end text-[18px]">Dan Martynov</h1>
           <h2 className="col-[2/3] self-start text-[15px]">Design Engineer</h2>
         </header>
