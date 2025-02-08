@@ -8,7 +8,7 @@ export default async function Footer() {
   const headersList = await headers()
 
   return (
-    <footer className="font-[family-name:var(--font-geist-mono)] uppercase border-t-1 border-neutral-100 text-[11px] text-neutral-400 mt-16">
+    <footer className="font-[family-name:var(--font-geist-mono)] uppercase border-t-1 border-neutral-100 text-[11px] text-neutral-400">
       <div className="max-w-[540px] mx-auto px-6 py-4 flex justify-between">
         <City city={headersList.get('x-geo-city') || ''} />
         <Weather latitude={headersList.get('x-geo-latitude') || ''} longitude={headersList.get('x-geo-longitude') || ''} />
