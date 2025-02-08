@@ -6,6 +6,8 @@ export function middleware(request: NextRequest) {
   const geo = geolocation(request)
   const response = NextResponse.next()
 
+  console.log({geo});
+
   Object.entries(geo).forEach(([name, value]) => {
     if (value) {
       response.headers.set(`x-${name}`, value)
