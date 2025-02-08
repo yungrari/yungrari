@@ -1,34 +1,35 @@
-import { headers } from "next/headers";
-
 async function getWeather({ 
-  latitude = '52.52', 
-  longitude = '13.41' 
+  latitude, 
+  longitude
 }: { 
   latitude: string, 
   longitude: string 
 }) {
   try {
-    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}`);
-    const data = await response.json();
+    const response = await fetch(
+      `https://api.open-meteo.com/v1/forecast?latitude=${latitude || 52.52}&longitude=${longitude || 14.14}&current=temperature_2m,weather_code`
+    )
+    const data = await response.json()
 
-    return JSON.stringify(data);
+    return `${Math.round(data.current.temperature_2m)}${data.current_units.temperature_2m}`
   } catch (error) {
-    console.error(error);
+    console.error(error)
 
     return ''
   }
 }
 
-export default async function Footer() {
-  const headersList = await headers()
-
-  const latitude = headersList.get('x-geo-latitude') || '';
-  const longitude = headersList.get('x-geo-longitude') || '';
-
-  const weather = await getWeather({ latitude, longitude });
+export default async function Weather({ 
+  latitude, 
+  longitude 
+}: { 
+  latitude: string, 
+  longitude: string 
+}) {
+  const weather = await getWeather({ latitude, longitude })
 
   if (!weather) {
-    return null;
+    return null
   }
 
   return (

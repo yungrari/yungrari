@@ -1,10 +1,4 @@
-import { headers } from "next/headers";
-
-export default async function City() {
-  const headersList = await headers()
-
-  const city = headersList.get('x-geo-city') || '';
-
+export default async function City({ city }: { city: string }) {
   if (!city) {
     return null
   }
