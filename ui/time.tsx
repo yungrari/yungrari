@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react'
 
-export default function Time({ time: initialTime }: { time: string }) {
-  const [time, setTime] = useState(initialTime)
+export default function Time() {
+  const [time, setTime] = useState('00:00:00')
 
   useEffect(() => {
     const timer = setInterval(() => {

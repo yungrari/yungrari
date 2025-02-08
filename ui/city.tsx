@@ -1,4 +1,4 @@
-export default async function City({ city }: { city: string }) {
+export default function City({ city }: { city: string }) {
   if (!city) {
     return null
   }
