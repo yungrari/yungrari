@@ -29,7 +29,7 @@ export default function Content() {
                 {item.link && (
                   <a
                     className="flex items-center gap-1 hover:underline hover:underline-offset-4"
-                        target="_blank"
+                    target="_blank"
                     rel="noopener noreferrer"
                     {...item.link}
                   >
