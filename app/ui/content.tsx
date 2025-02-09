@@ -15,9 +15,9 @@ export default function Content() {
         <section className="flex flex-col gap-6 first:gap-3" key={section.title}>
           <h3>{section.title}</h3>
 
-          <div className="flex flex-col gap-6">
+          <ul className="flex flex-col gap-6">
             {section.items.map((item) => (
-              <div key={item.id}>
+              <li key={item.id}>
                 {item.year && (
                   <p className="text-[var(--grey3)]">{item.year}</p>
                 )}
@@ -45,9 +45,9 @@ export default function Content() {
                     ))}
                   </ul>
                 )}
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
       ))}
     </article>
