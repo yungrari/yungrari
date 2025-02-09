@@ -1,30 +1,58 @@
-export default {
+type Config = {
+  title: string;
+  description: string;
+  content: {
+    title: string;
+    items: {
+      id?: string;
+      link?: { href: string; title: string };
+      list?: string[];
+      text?: string;
+      year?: string;
+    }[]
+  }[]
+}
+
+const config: Config = {
   title: "Dan Martynov",
   description: "Design Engineer",
   content: [
     { 
       title: "About",
-      content: "All I want to do is build websites.",
+      items: [
+        {
+          id: '1',
+          text: "All I want to do is build websites.",
+        },
+      ],
     },
     {
       title: "Projects",
-      content: [
+      items: [
         {
+          id: '1',
           year: "2023",
-          title: "EBRAINS CoCreate AI Art",
-          link: "https://ebrains.ai",
-          content: "A 3D web application showcasing the fusion of design and neuroscience, highlighting the potential of Trustworthy AI in sustainable development.",
+          link: {
+            href: "https://ebrains.ai",
+            title: "EBRAINS CoCreate AI Art",
+          },
+          list: [
+            "A 3D web application showcasing the fusion of design and neuroscience, highlighting the potential of Trustworthy AI in sustainable development."
+          ],
         },
-      ]
+      ],
     },
     {
       title: "Experience",
-      content: [
+      items: [
         {
+          id: '1',
           year: "2021 – Present",
-          title: "Software Engineer at AMO",
-          link: "https://amo.tech",
-          content: [
+          link: {
+            href: "https://amo.com",
+            title: "Software Engineer at AMO",
+          },
+          list: [
             "Architected complex web applications using Next.js and TypeScript.",
             "Mentored developers, emphasizing best practices in coding and design.",
             "I led the architecture and integrated a comprehensive design system, enhancing usability and performance.",
@@ -32,42 +60,63 @@ export default {
           ],
         },
         {
+          id: '2',
           year: "2020 – 2021",
-          title: "Software Engineer at IWIS",
-          link: "https://iwis.io",
-          content: [
+          link: {
+            href: "https://iwis.com",
+            title: "Software Engineer at IWIS",
+          },
+          list: [
             "Developed single-page applications with React and Redux, focusing on performance and user experience.",
             "Enhanced SEO strategies through server-side rendering with Next.js.",
           ],
         },
         {
+          id: '3',
           year: "2017 – 2019",
-          title: "Designer at GALAGAN",
-          link: "https://galagan.ua",
-          content: [
+          link: {
+            href: "https://galagan.com",
+            title: "Designer at GALAGAN",
+          },
+          list: [
             "Collaborated with designers to create responsive web components, ensuring visual harmony across platforms.",
           ],
         },
-      ]
+      ],
     },
     {
       title: "Certifications",
-      content: [
+      items: [
         {
+          id: '1',
           year: "2020",
-          title: "Front-end at Projector",
-          link: "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+          link: {
+            href: "https://projector.com",
+            title: "Front-end at Projector",
+          },
+          list: [],
         },
         {
+          id: '2',
           year: "2016",
-          title: "Design at SVC",
-          link: "https://analytics.google.com/analytics/academy/",
+          link: {
+            href: "https://svc.com",
+            title: "UI/UX Design at SVC",
+          },
+          list: [],
         }
       ],
     },
     {
       title: "Connect",
-      content: "Let’s build something great together. Reach out via LinkedIn or email me at [email@example.com]."
+      items: [
+        {
+          id: '1',
+          text: "Let’s build something great together. Reach out via LinkedIn or email me at [email@example.com].",
+        }
+      ],
     }
   ]
-} as const
+} 
+
+export default config
