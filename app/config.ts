@@ -1,4 +1,4 @@
-type Config = {
+export type Config = {
   title: string;
   description: string;
   content: {
@@ -10,6 +10,7 @@ type Config = {
       text?: string;
       year?: string;
     }[]
+    gap: string
   }[]
 }
 
@@ -25,6 +26,7 @@ const config: Config = {
           text: "All I want to do is build websites.",
         },
       ],
+      gap: "gap-3",
     },
     {
       title: "Projects",
@@ -41,6 +43,7 @@ const config: Config = {
           ],
         },
       ],
+      gap: "gap-6",
     },
     {
       title: "Experience",
@@ -83,6 +86,7 @@ const config: Config = {
           ],
         },
       ],
+      gap: "gap-6",
     },
     {
       title: "Certifications",
@@ -106,6 +110,7 @@ const config: Config = {
           list: [],
         }
       ],
+      gap: "gap-3",
     },
     {
       title: "Connect",
@@ -115,6 +120,7 @@ const config: Config = {
           text: "Let’s build something great together. Reach out via LinkedIn or email me at [email@example.com].",
         }
       ],
+      gap: "gap-6",
     }
   ]
 } 

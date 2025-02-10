@@ -7,14 +7,14 @@ export default function Blur() {
         pointer-events-none 
         fixed
         w-full
-        h-[var(--pt)]
+        h-[var(--page-padding-top)]
         z-1
         backdrop-blur-[5px]
         opacity-95
-        [mask-image:linear-gradient(to_bottom,var(--foreground)_25%,transparent)]
+        [mask-image:linear-gradient(to_bottom,var(--grey1)_25%,transparent)]
         after:absolute
         after:inset-0
-        after:bg-[linear-gradient(to_bottom,var(--background),transparent)]
+        after:bg-[linear-gradient(to_bottom,var(--wash3),transparent)]
       " 
     />
   )

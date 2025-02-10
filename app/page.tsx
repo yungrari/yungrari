@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Blur />
 
-      <main className="flex flex-col gap-9 font-[family-name:var(--font-geist-sans)] max-w-[var(--max-w)] mx-auto pt-[var(--pt)] pb-[var(--pb)] px-[var(--px)]">
+      <main className="flex flex-col gap-9 font-[family-name:var(--font-geist-sans)] max-w-[var(--page-column-width)] mx-auto pt-[var(--page-padding-top)] pb-[var(--page-padding-bottom)] px-[var(--page-padding)]">
         <header className="grid grid-cols-[92px_1fr] gap-x-4">
           <User />
           <h1 className="col-[2/3] self-end">{config.title}</h1>
