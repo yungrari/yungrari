@@ -1,58 +1,61 @@
+type Link = {
+  href: string;
+  title: string;
+};
+
+type Items = {
+  id: string;
+  link: Link;
+  list: string[];
+  text: string;
+  year: string;
+};
+
+type Content = {
+  title: string;
+  items: Partial<Items>[];
+};
+
 type Config = {
   title: string;
   description: string;
-  content: {
-    title: string;
-    items: Partial<{
-      link: { 
-        href: string; 
-        title: string 
-      };
-      list: string[];
-      text: string;
-      year: string;
-      id: string;
-    }>[]
-    className: string
-  }[]
-}
+  content: Content[];
+};
 
 const config: Config = {
   title: "Dan Martynov",
   description: "Design Engineer",
   content: [
-    { 
+    {
       title: "About",
       items: [
         {
-          id: '1',
+          id: "1",
           text: "All I want to do is build websites.",
         },
       ],
-      className: "flex flex-col gap-3",
     },
     {
       title: "Projects",
       items: [
         {
-          id: '1',
+          id: "1",
           year: "2023",
           link: {
             href: "https://ebrains.ai",
             title: "EBRAINS CoCreate AI Art",
           },
           list: [
-            "A 3D web application showcasing the fusion of design and neuroscience, highlighting the potential of Trustworthy AI in sustainable development."
+            "A 3D web application showcasing the fusion of design and neuroscience, highlighting the potential of Trustworthy AI in sustainable development.",
           ],
         },
       ],
-      className: "flex flex-col gap-6",
     },
     {
       title: "Experience",
       items: [
         {
-          id: '1',
+          id: "1",
           year: "2021 – Present",
           link: {
             href: "https://amo.com",
@@ -66,7 +69,7 @@ const config: Config = {
           ],
         },
         {
-          id: '2',
+          id: "2",
           year: "2020 – 2021",
           link: {
             href: "https://iwis.com",
@@ -78,7 +81,7 @@ const config: Config = {
           ],
         },
         {
-          id: '3',
+          id: "3",
           year: "2017 – 2019",
           link: {
             href: "https://galagan.com",
@@ -89,13 +92,12 @@ const config: Config = {
           ],
         },
       ],
-      className: "flex flex-col gap-6",
     },
     {
       title: "Certifications",
       items: [
         {
-          id: '1',
+          id: "1",
           year: "2020",
           link: {
             href: "https://projector.com",
@@ -104,28 +106,26 @@ const config: Config = {
           list: [],
         },
         {
-          id: '2',
+          id: "2",
           year: "2016",
           link: {
             href: "https://svc.com",
             title: "UI/UX Design at SVC",
           },
           list: [],
-        }
+        },
       ],
-      className: "flex flex-col gap-3",
     },
     {
       title: "Connect",
       items: [
         {
-          id: '1',
+          id: "1",
           text: "Let’s build something great together. Reach out via LinkedIn or email me at [email@example.com].",
-        }
+        },
       ],
-      className: "flex flex-col gap-6",
-    }
-  ]
-} 
+    },
+  ],
+};
 
-export default config
+export default config;
