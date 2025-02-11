@@ -15,7 +15,7 @@ export default function Blur() {
         after:absolute
         after:inset-0
         after:bg-[linear-gradient(to_bottom,var(--wash3),transparent)]
-      " 
+      "
     />
-  )
+  );
 }

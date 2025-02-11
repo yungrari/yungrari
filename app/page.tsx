@@ -20,7 +20,7 @@ export default function Home() {
         <Content />
       </main>
 
-      <footer className="font-[family-name:var(--font-geist-mono)] uppercase border-t-1 border-[var(--wash2)] text-[var(--wash1)]">
+      <footer className="font-[family-name:var(--font-geist-mono)] uppercase text-[var(--wash1)]">
         <Widgets />
       </footer>
     </>

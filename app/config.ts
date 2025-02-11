@@ -1,16 +1,19 @@
-export type Config = {
+type Config = {
   title: string;
   description: string;
   content: {
     title: string;
-    items: {
-      id?: string;
-      link?: { href: string; title: string };
-      list?: string[];
-      text?: string;
-      year?: string;
-    }[]
-    gap: string
+    items: Partial<{
+      link: { 
+        href: string; 
+        title: string 
+      };
+      list: string[];
+      text: string;
+      year: string;
+      id: string;
+    }>[]
+    className: string
   }[]
 }
 
@@ -26,7 +29,7 @@ const config: Config = {
           text: "All I want to do is build websites.",
         },
       ],
-      gap: "gap-3",
+      className: "flex flex-col gap-3",
     },
     {
       title: "Projects",
@@ -43,7 +46,7 @@ const config: Config = {
           ],
         },
       ],
-      gap: "gap-6",
+      className: "flex flex-col gap-6",
     },
     {
       title: "Experience",
@@ -86,7 +89,7 @@ const config: Config = {
           ],
         },
       ],
-      gap: "gap-6",
+      className: "flex flex-col gap-6",
     },
     {
       title: "Certifications",
@@ -110,7 +113,7 @@ const config: Config = {
           list: [],
         }
       ],
-      gap: "gap-3",
+      className: "flex flex-col gap-3",
     },
     {
       title: "Connect",
@@ -120,7 +123,7 @@ const config: Config = {
           text: "Let’s build something great together. Reach out via LinkedIn or email me at [email@example.com].",
         }
       ],
-      gap: "gap-6",
+      className: "flex flex-col gap-6",
     }
   ]
 } 
