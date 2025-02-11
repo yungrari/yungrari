@@ -1,4 +1,4 @@
-export default function Blur() {
+export function Blur() {
   return (
     <div
       aria-hidden
