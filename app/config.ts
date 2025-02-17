@@ -7,7 +7,7 @@ export type Paragraph = {
   id: string;
   link: Link;
   list: string[];
-  year: string;
+  name: string;
 };
 
 export type Content = {
@@ -41,7 +41,7 @@ export default {
       items: [
         {
           id: "projects-ebrains",
-          year: "2023",
+          name: "2023",
           link: {
             href: "https://ebrains.vercel.app",
             title: "EBRAINS CoCreate AI Art",
@@ -57,20 +57,20 @@ export default {
       items: [
         {
           id: "work-patrianna",
-          year: "2024 — Now",
+          name: "2024 — Now",
           link: {
             href: "https://www.patrianna.com",
             title: "Software Engineer at PATRIANNA",
           },
           list: [
-            "Improved workflows by implementing customizable and isolated UI parts.",
+            "Improved workflows by implementing customizable and isolated UI.",
             "Mentored developers and contributed to team processes.",
             "Consistently optimized Core Web Vitals and improved performance.",
           ],
         },
         {
           id: "work-amo",
-          year: "2021 — 2023",
+          name: "2021 — 2023",
           link: {
             href: "https://amo.tech",
             title: "Software Engineer at AMO",
@@ -83,7 +83,7 @@ export default {
         },
         {
           id: "work-iwis",
-          year: "2020 — 2021",
+          name: "2020 — 2021",
           link: {
             href: "https://iwis.io/en",
             title: "Software Engineer at IWIS",
@@ -95,7 +95,7 @@ export default {
         },
         {
           id: "work-galagan",
-          year: "2017 — 2019",
+          name: "2017 — 2019",
           link: {
             href: "https://galagan.ua/en",
             title: "UI/UX Designer at GALAGAN",
@@ -111,7 +111,7 @@ export default {
       items: [
         {
           id: "cert-prjctr",
-          year: "2020",
+          name: "2020",
           link: {
             href: "https://prjctr.com/en",
             title: "Front-end at Projector",
@@ -119,7 +119,7 @@ export default {
         },
         {
           id: "cert-svc",
-          year: "2016",
+          name: "2016",
           link: {
             href: "https://svc.com.ua/en",
             title: "UI/UX Design at School of Visual Communication",
@@ -132,7 +132,7 @@ export default {
       items: [
         {
           id: "connect-email",
-          year: "Email",
+          name: "Email",
           link: {
             href: "mailto:yungrari2046@gmail.com",
             title: "yungrari2046@gmail.com",
@@ -140,7 +140,7 @@ export default {
         },
         {
           id: "connect-github",
-          year: "GitHub",
+          name: "GitHub",
           link: {
             href: "https://github.com/yungrari",
             title: "yungrari",
@@ -148,7 +148,7 @@ export default {
         },
         {
           id: "connect-linkedin",
-          year: "LinkedIn",
+          name: "LinkedIn",
           link: {
             href: "https://linkedin.com/in/yungrari",
             title: "yungrari",
@@ -156,7 +156,7 @@ export default {
         },
         {
           id: "connect-x",
-          year: "X",
+          name: "X",
           link: {
             href: "https://x.com/8al3nc14g",
             title: "8al3nc14g",
@@ -164,7 +164,7 @@ export default {
         },
         {
           id: "connect-telegram",
-          year: "Telegram",
+          name: "Telegram",
           link: {
             href: "https://t.me/gothicyoung",
             title: "@gothicyoung",
