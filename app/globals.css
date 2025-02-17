@@ -25,8 +25,8 @@
   --page-padding-bottom: 96px;
   --page-padding: 24px;
   --page-column-width: 588px;
-  --font-size: 15px;
-  --line-height: 1.6;
+  --typography-size: 15px;
+  --typography-leading: 1.6;
 }
 
 @media (min-width: 640px) {
@@ -34,11 +34,4 @@
     --page-padding-top: 72px;
     --page-padding-bottom: 144px;
   }
-}
-
-body {
-  background: var(--wash3);
-  color: var(--grey1);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
 }

@@ -33,7 +33,7 @@ export function Time() {
           <span>{minutes}</span>
         </span>
       ) : (
-        <span className="bg-[var(--wash2)] text-transparent rounded animate-pulse">
+        <span className="bg-(--wash2) text-transparent rounded animate-pulse">
           00:00
         </span>
       )}

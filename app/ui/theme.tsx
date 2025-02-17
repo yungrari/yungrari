@@ -20,7 +20,7 @@ export function Theme() {
 
   if (!mounted) {
     return (
-      <span className="w-24 h-8 rounded-full bg-[var(--wash2)] text-transparent ml-auto animate-pulse" />
+      <span className="bg-(--wash2) w-24 h-8 rounded-full text-transparent ml-auto animate-pulse" />
     );
   }
 
@@ -39,7 +39,7 @@ export function Theme() {
           />
           <span className="sr-only">{mode.name}</span>
           <span
-            className="w-8 h-8 flex items-center justify-center rounded-full peer-checked:text-[var(--grey3)] peer-checked:shadow-[0_0_0_1px_var(--grey3)]"
+            className="w-8 h-8 flex items-center justify-center rounded-full peer-checked:text-(--grey3) peer-checked:shadow-[0_0_0_1px_var(--grey3)]"
             aria-hidden="true"
           >
             <mode.icon className="w-3 h-3" />

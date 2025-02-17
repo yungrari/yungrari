@@ -15,13 +15,9 @@ export function Content({ content }: { content: Content[] }) {
           <ul className="flex flex-col gap-6">
             {section.items.map((item) => (
               <li key={item.id}>
-                {item.year && (
-                  <p className="text-[var(--grey3)]">{item.year}</p>
-                )}
+                {item.year && <p className="text-(--grey3)">{item.year}</p>}
 
-                {item.text && (
-                  <p className="text-[var(--grey2)]">{item.text}</p>
-                )}
+                {item.text && <p className="text-(--grey2)">{item.text}</p>}
 
                 {item.link && (
                   <a
@@ -36,7 +32,7 @@ export function Content({ content }: { content: Content[] }) {
                 )}
 
                 {item.list && (
-                  <ul className="text-[var(--grey2)]">
+                  <ul className="text-(--grey2)">
                     {item.list.map((listItem) => (
                       <li key={listItem}>{listItem}</li>
                     ))}

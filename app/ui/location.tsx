@@ -42,7 +42,7 @@ export function Location() {
       {temperature ? (
         <span>{Math.round(temperature)}°C</span>
       ) : (
-        <span className="bg-[var(--wash2)] text-transparent rounded animate-pulse">
+        <span className="bg-(--wash2) text-transparent rounded animate-pulse">
           0°C
         </span>
       )}

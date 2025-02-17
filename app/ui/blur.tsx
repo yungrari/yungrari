@@ -7,7 +7,7 @@ export function Blur() {
         pointer-events-none 
         fixed
         w-full
-        h-[var(--page-padding-top)]
+        h-(--page-padding-top)
         z-1
         backdrop-blur-[5px]
         opacity-95
