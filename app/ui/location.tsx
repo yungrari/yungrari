@@ -46,7 +46,6 @@ export function Location() {
           0°C
         </span>
       )}
-
       <GlobeIcon />
     </section>
   );

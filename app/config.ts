@@ -7,7 +7,6 @@ export type Paragraph = {
   id: string;
   link: Link;
   list: string[];
-  text: string;
   year: string;
 };
 
@@ -30,8 +29,10 @@ export default {
       title: "About",
       items: [
         {
-          id: "1",
-          text: "All I want to do is build websites. Let's create something great together.",
+          id: "about-text",
+          list: [
+            "All I want to do is build websites. Let's create something great together.",
+          ],
         },
       ],
     },
@@ -39,14 +40,14 @@ export default {
       title: "Projects",
       items: [
         {
-          id: "1",
+          id: "projects-ebrains",
           year: "2023",
           link: {
-            href: "https://ebrains.ai",
+            href: "https://ebrains.vercel.app",
             title: "EBRAINS CoCreate AI Art",
           },
           list: [
-            "A 3D web application showcasing the fusion of design and neuroscience, highlighting the potential of Trustworthy AI in sustainable development.",
+            "A 3D web application to visually communicate the convergence of design, neurotechnology, neuromorphic computing, trustworthy AI, and sustainable development.",
           ],
         },
       ],
@@ -55,40 +56,52 @@ export default {
       title: "Experience",
       items: [
         {
-          id: "1",
-          year: "2021 – Present",
+          id: "work-patrianna",
+          year: "2024 — Now",
           link: {
-            href: "https://amo.com",
+            href: "https://www.patrianna.com",
+            title: "Software Engineer at PATRIANNA",
+          },
+          list: [
+            "Improved workflows by implementing customizable and isolated UI parts.",
+            "Mentored developers and contributed to team processes.",
+            "Consistently optimized Core Web Vitals and improved performance.",
+          ],
+        },
+        {
+          id: "work-amo",
+          year: "2021 — 2023",
+          link: {
+            href: "https://amo.tech",
             title: "Software Engineer at AMO",
           },
           list: [
-            "Architected complex web applications using Next.js and TypeScript.",
-            "Mentored developers, emphasizing best practices in coding and design.",
-            "I led the architecture and integrated a comprehensive design system, enhancing usability and performance.",
-            "Developed upsell mechanics post-purchase.",
+            "Led the architecture of a complex website using Next.js and TypeScript.",
+            "Developed a comprehensive design system documented with Storybook.",
+            "Integrated purchase mechanics with PayPal, Google Pay, and Apple Pay.",
           ],
         },
         {
-          id: "2",
-          year: "2020 – 2021",
+          id: "work-iwis",
+          year: "2020 — 2021",
           link: {
-            href: "https://iwis.com",
+            href: "https://iwis.io/en",
             title: "Software Engineer at IWIS",
           },
           list: [
-            "Developed single-page applications with React and Redux, focusing on performance and user experience.",
-            "Enhanced SEO strategies through server-side rendering with Next.js.",
+            "Built dashboards with a focus on charts and data visualization.",
+            "Developed mobile-first progressive web applications.",
           ],
         },
         {
-          id: "3",
-          year: "2017 – 2019",
+          id: "work-galagan",
+          year: "2017 — 2019",
           link: {
-            href: "https://galagan.com",
-            title: "Designer at GALAGAN",
+            href: "https://galagan.ua/en",
+            title: "UI/UX Designer at GALAGAN",
           },
           list: [
-            "Collaborated with designers to create responsive web components, ensuring visual harmony across platforms.",
+            "Created a visual identity for brands, including logos, typography, and UI kits.",
           ],
         },
       ],

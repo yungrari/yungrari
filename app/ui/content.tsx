@@ -17,8 +17,6 @@ export function Content({ content }: { content: Content[] }) {
               <li key={item.id}>
                 {item.year && <p className="text-(--grey3)">{item.year}</p>}
 
-                {item.text && <p className="text-(--grey2)">{item.text}</p>}
-
                 {item.link && (
                   <a
                     className="flex items-center gap-0.5 hover:underline hover:underline-offset-4"
