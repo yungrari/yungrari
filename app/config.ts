@@ -1,9 +1,9 @@
-type Link = {
+export type Link = {
   href: string;
   title: string;
 };
 
-type Items = {
+export type Paragraph = {
   id: string;
   link: Link;
   list: string[];
@@ -11,18 +11,18 @@ type Items = {
   year: string;
 };
 
-type Content = {
+export type Content = {
   title: string;
-  items: Partial<Items>[];
+  items: Partial<Paragraph>[];
 };
 
-type Config = {
+export type Config = {
   title: string;
   description: string;
   content: Content[];
 };
 
-const config: Config = {
+export default {
   title: "Dan Martynov",
   description: "Design Engineer",
   content: [
@@ -31,7 +31,7 @@ const config: Config = {
       items: [
         {
           id: "1",
-          text: "All I want to do is build websites.",
+          text: "All I want to do is build websites. Let's create something great together.",
         },
       ],
     },
@@ -97,22 +97,20 @@ const config: Config = {
       title: "Certifications",
       items: [
         {
-          id: "1",
+          id: "cert-prjctr",
           year: "2020",
           link: {
-            href: "https://projector.com",
+            href: "https://prjctr.com/en",
             title: "Front-end at Projector",
           },
-          list: [],
         },
         {
-          id: "2",
+          id: "cert-svc",
           year: "2016",
           link: {
-            href: "https://svc.com",
-            title: "UI/UX Design at SVC",
+            href: "https://svc.com.ua/en",
+            title: "UI/UX Design at School of Visual Communication",
           },
-          list: [],
         },
       ],
     },
@@ -120,12 +118,46 @@ const config: Config = {
       title: "Connect",
       items: [
         {
-          id: "1",
-          text: "Let’s build something great together. Reach out via LinkedIn or email me at [email@example.com].",
+          id: "connect-email",
+          year: "Email",
+          link: {
+            href: "mailto:yungrari2046@gmail.com",
+            title: "yungrari2046@gmail.com",
+          },
+        },
+        {
+          id: "connect-github",
+          year: "GitHub",
+          link: {
+            href: "https://github.com/yungrari",
+            title: "yungrari",
+          },
+        },
+        {
+          id: "connect-linkedin",
+          year: "LinkedIn",
+          link: {
+            href: "https://linkedin.com/in/yungrari",
+            title: "yungrari",
+          },
+        },
+        {
+          id: "connect-x",
+          year: "X",
+          link: {
+            href: "https://x.com/8al3nc14g",
+            title: "8al3nc14g",
+          },
+        },
+        {
+          id: "connect-telegram",
+          year: "Telegram",
+          link: {
+            href: "https://t.me/gothicyoung",
+            title: "@gothicyoung",
+          },
         },
       ],
     },
   ],
-};
-
-export default config;
+} satisfies Config;

@@ -1,13 +1,13 @@
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
-import config from "@/app/config";
+import type { Content } from "@/app/config";
 
-export function Content() {
+export function Content({ content }: { content: Content[] }) {
   return (
     <article className="flex flex-col gap-15">
-      {config.content.map((section) => (
+      {content.map((section) => (
         <section
-          className="flex flex-col gap-6 first:gap-3 nth-[4]:[&>ul]:gap-3"
+          className="flex flex-col gap-6 first:gap-3 nth-[4]:[&>ul]:gap-3 nth-[5]:[&>ul]:gap-3"
           key={section.title}
         >
           <h3>{section.title}</h3>
