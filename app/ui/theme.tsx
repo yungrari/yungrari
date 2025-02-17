@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { SunIcon, MoonIcon, GearIcon, GlobeIcon } from "@radix-ui/react-icons";
+import { SunIcon, MoonIcon, GearIcon } from "@radix-ui/react-icons";
 
 const items = [
-  { name: "system", icon: GearIcon },
   { name: "light", icon: SunIcon },
   { name: "dark", icon: MoonIcon },
+  { name: "system", icon: GearIcon },
 ] as const;
 
 export function Theme() {
@@ -20,7 +20,7 @@ export function Theme() {
 
   if (!mounted) {
     return (
-      <span className="w-18 h-6 rounded-full bg-[var(--wash2)] text-transparent ml-auto animate-pulse" />
+      <span className="w-24 h-8 rounded-full bg-[var(--wash2)] text-transparent ml-auto animate-pulse" />
     );
   }
 
@@ -39,10 +39,10 @@ export function Theme() {
           />
           <span className="sr-only">{mode.name}</span>
           <span
-            className="w-6 h-6 flex items-center justify-center rounded-full peer-checked:text-[var(--grey3)] peer-checked:shadow-[0_0_0_1px_var(--grey3)]"
+            className="w-8 h-8 flex items-center justify-center rounded-full peer-checked:text-[var(--grey3)] peer-checked:shadow-[0_0_0_1px_var(--grey3)]"
             aria-hidden="true"
           >
-            <mode.icon />
+            <mode.icon className="w-4 h-4" />
           </span>
         </label>
       ))}

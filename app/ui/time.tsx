@@ -3,19 +3,25 @@
 import { useEffect, useState } from "react";
 import { ClockIcon } from "@radix-ui/react-icons";
 
+const getTime = (value: number) => value.toString().padStart(2, "0");
+
 export function Time() {
   const [hours, setHours] = useState("");
   const [minutes, setMinutes] = useState("");
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    function setTime() {
       const date = new Date();
+      setHours(getTime(date.getHours()));
+      setMinutes(getTime(date.getMinutes()));
+    }
 
-      setHours(date.getHours().toString().padStart(2, "0"));
-      setMinutes(date.getMinutes().toString().padStart(2, "0"));
-    }, 1000);
+    setTime();
+    const intervalId = setInterval(setTime, 1000);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
 
   return (
@@ -23,7 +29,7 @@ export function Time() {
       {!!hours && !!minutes ? (
         <span>
           <span>{hours}</span>
-          <span className="animate-pulse">:</span>
+          <span className="animate-pulse duration-1000">:</span>
           <span>{minutes}</span>
         </span>
       ) : (
