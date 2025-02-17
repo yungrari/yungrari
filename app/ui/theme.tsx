@@ -42,7 +42,7 @@ export function Theme() {
             className="w-8 h-8 flex items-center justify-center rounded-full peer-checked:text-[var(--grey3)] peer-checked:shadow-[0_0_0_1px_var(--grey3)]"
             aria-hidden="true"
           >
-            <mode.icon className="w-4 h-4" />
+            <mode.icon className="w-3 h-3" />
           </span>
         </label>
       ))}
