@@ -15,7 +15,7 @@ export function Header({
       <User />
       <h1 className="col-[2/3] self-end">{title}</h1>
       <h2 className="col-[2/3] self-start text-(--grey2)">
-        <Suspense fallback="Engineer">
+        <Suspense fallback={subtitle[0]}>
           <Subtitle subtitle={subtitle} />
         </Suspense>
       </h2>
