@@ -1,8 +1,7 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 import { User } from "@/app/ui/user";
+import { Subtitle } from "@/app/ui/subtitle";
 
 export function Header({
   title,
@@ -11,15 +10,14 @@ export function Header({
   title: string;
   subtitle: [string, string];
 }) {
-  const searchParams = useSearchParams();
-  const mode = searchParams.get("mode");
-
   return (
     <header className="grid grid-cols-[92px_1fr] gap-x-4">
       <User />
       <h1 className="col-[2/3] self-end">{title}</h1>
       <h2 className="col-[2/3] self-start text-(--grey2)">
-        {subtitle[mode === "design" ? 0 : 1]}
+        <Suspense fallback="Loading...">
+          <Subtitle subtitle={subtitle} />
+        </Suspense>
       </h2>
     </header>
   );
