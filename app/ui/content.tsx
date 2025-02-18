@@ -24,13 +24,7 @@ function Section({ title, items }: Content) {
               </a>
             )}
 
-            {item.list && (
-              <ul className="text-(--grey2)">
-                {item.list.map((listItem) => (
-                  <li key={listItem}>{listItem}</li>
-                ))}
-              </ul>
-            )}
+            {item.text && <p className="text-(--grey2)">{item.text}</p>}
           </li>
         ))}
       </ul>
