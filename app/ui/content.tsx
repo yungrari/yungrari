@@ -4,7 +4,7 @@ import type { Content } from "@/app/config";
 
 function Section({ title, items }: Content) {
   return (
-    <section className="flex flex-col gap-6 first:gap-3 nth-[4]:[&>ul]:gap-3 nth-[5]:[&>ul]:gap-3">
+    <section className="flex flex-col gap-6 first:gap-3 nth-[4]:[&>ul]:gap-1 nth-[5]:[&>ul]:gap-1">
       <h3>{title}</h3>
 
       <ul className="flex flex-col gap-6">
