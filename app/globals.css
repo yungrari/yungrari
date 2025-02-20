@@ -2,36 +2,47 @@
 
 @layer base {
   :root {
-    --grey1: #111;
-    --grey2: #555;
-    --grey3: #999;
-    --wash1: #e5e5e5;
-    --wash2: #f2f2f2;
-    --wash3: #fff;
+    --grey1: hsl(0, 0%, 7%);
+    --grey2: hsl(0, 0%, 33%);
+    --grey3: hsl(0, 0%, 60%);
+    --wash1: hsl(0, 0%, 90%);
+    --wash2: hsl(0, 0%, 95%);
+    --wash3: hsl(0, 0%, 100%);
   }
 
   .dark {
-    --grey1: #eee;
-    --grey2: #bbb;
-    --grey3: #888;
-    --wash1: #4e4e4e;
-    --wash2: #383838;
-    --wash3: #222;
+    --grey1: hsl(0, 0%, 93%);
+    --grey2: hsl(0, 0%, 73%);
+    --grey3: hsl(0, 0%, 53%);
+    --wash1: hsl(0, 0%, 31%);
+    --wash2: hsl(0, 0%, 22%);
+    --wash3: hsl(0, 0%, 13%);
   }
 }
 
 :root {
-  --page-padding-top: 48px;
-  --page-padding-bottom: 96px;
-  --page-padding: 24px;
-  --page-column-width: 588px;
-  --typography-size: 15px;
-  --typography-leading: 1.6;
+  --page-padding-top: 3rem;
+  --page-padding-bottom: 6rem;
+  --page-padding-inline: 1.5rem;
+  --page-column-width: 36.75rem;
+  --typography-size: 0.9375rem;
+  --typography-leading: 1.5rem;
 }
 
 @media (min-width: 640px) {
   :root {
-    --page-padding-top: 72px;
-    --page-padding-bottom: 144px;
+    --page-padding-top: 4.5rem;
+    --page-padding-bottom: 9rem;
+  }
+}
+
+@media print {
+  :root {
+    --page-padding-top: 15mm;
+    --page-padding-bottom: 20mm;
+    --page-padding-inline: 20mm;
+    --page-column-width: 100%;
+    --typography-size: 8pt;
+    --typography-leading: 14pt;
   }
 }

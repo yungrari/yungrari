@@ -11,14 +11,14 @@ export function Header({
   subtitle: string[];
 }) {
   return (
-    <header className="grid grid-cols-[92px_1fr] gap-x-4">
+    <header className="flex items-center gap-4">
       <User />
-      <h1 className="col-[2/3] self-end">{title}</h1>
-      <h2 className="col-[2/3] self-start text-(--grey2)">
+      <section>
+        <h1>{title}</h1>
         <Suspense fallback={subtitle[0]}>
           <Subtitle subtitle={subtitle} />
         </Suspense>
-      </h2>
+      </section>
     </header>
   );
 }

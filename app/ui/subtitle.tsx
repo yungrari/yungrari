@@ -6,5 +6,5 @@ export function Subtitle({ subtitle }: { subtitle: string[] }) {
   const searchParams = useSearchParams();
   const mode = searchParams.get("mode");
 
-  return subtitle[+(mode ?? 0)];
+  return <h2 className="text-(--grey2)">{subtitle[+(mode ?? 0)]}</h2>;
 }

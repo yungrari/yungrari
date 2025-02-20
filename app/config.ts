@@ -3,7 +3,7 @@ export type Link = {
   title: string;
 };
 
-export type Paragraph = {
+export type Block = {
   id: string;
   link: Link;
   text: string;
@@ -12,7 +12,7 @@ export type Paragraph = {
 
 export type Content = {
   title: string;
-  items: Partial<Paragraph>[];
+  items: Partial<Block>[];
 };
 
 export type Config = {
@@ -138,19 +138,11 @@ export default {
           },
         },
         {
-          id: "connect-x",
-          name: "X",
-          link: {
-            href: "https://x.com/8al3nc14g",
-            title: "8al3nc14g",
-          },
-        },
-        {
           id: "connect-telegram",
           name: "Telegram",
           link: {
             href: "https://t.me/gothicyoung",
-            title: "@gothicyoung",
+            title: "gothicyoung",
           },
         },
       ],

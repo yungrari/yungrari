@@ -1,31 +1,49 @@
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
-import type { Content } from "@/app/config";
+import type { Content, Block } from "@/app/config";
+
+function Unit({ name, link, text }: Partial<Block>) {
+  return (
+    <li>
+      {name && <p className="text-(--grey3)">{name}</p>}
+
+      {link && (
+        <a
+          className="flex items-center gap-0.5 hover:underline hover:underline-offset-4"
+          target="_blank"
+          rel="noopener noreferrer"
+          {...link}
+        >
+          <span>{link.title}</span>
+          <ArrowTopRightIcon className="print:hidden" />
+        </a>
+      )}
+
+      {text && <p className="text-(--grey2)">{text}</p>}
+    </li>
+  );
+}
 
 function Section({ title, items }: Content) {
   return (
-    <section className="flex flex-col gap-6 first:gap-3 nth-[4]:[&>ul]:gap-1 nth-[5]:[&>ul]:gap-1">
+    <section
+      className="
+        flex
+        flex-col
+        gap-6
+        first:gap-3
+        nth-[4]:[&>ul]:gap-2
+        nth-[5]:[&>ul]:gap-2
+        print:gap-3
+        print:nth-[4]:[&>ul]:gap-0
+        print:nth-[5]:[&>ul]:gap-0
+      "
+    >
       <h3>{title}</h3>
 
       <ul className="flex flex-col gap-6">
         {items.map((item) => (
-          <li key={item.id}>
-            {item.name && <p className="text-(--grey3)">{item.name}</p>}
-
-            {item.link && (
-              <a
-                className="flex items-center gap-0.5 hover:underline hover:underline-offset-4"
-                target="_blank"
-                rel="noopener noreferrer"
-                {...item.link}
-              >
-                <span>{item.link.title}</span>
-                <ArrowTopRightIcon />
-              </a>
-            )}
-
-            {item.text && <p className="text-(--grey2)">{item.text}</p>}
-          </li>
+          <Unit key={item.id} {...item} />
         ))}
       </ul>
     </section>
@@ -34,7 +52,7 @@ function Section({ title, items }: Content) {
 
 export function Content({ content }: { content: Content[] }) {
   return (
-    <article className="flex flex-col gap-15">
+    <article className="flex flex-col gap-15 print:gap-6">
       {content.map((section) => (
         <Section key={section.title} {...section} />
       ))}
