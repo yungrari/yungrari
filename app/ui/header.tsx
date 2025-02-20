@@ -8,7 +8,7 @@ export function Header({
   subtitle,
 }: {
   title: string;
-  subtitle: [string, string];
+  subtitle: string[];
 }) {
   return (
     <header className="grid grid-cols-[92px_1fr] gap-x-4">

@@ -17,13 +17,13 @@ export type Content = {
 
 export type Config = {
   title: string;
-  description: [string, string];
+  description: string[];
   content: Content[];
 };
 
 export default {
   title: "Dan Martynov",
-  description: ["Design Engineer", "Software Engineer"],
+  description: ["Design Engineer", "Software Engineer", "TESTING"],
   content: [
     {
       title: "About",
