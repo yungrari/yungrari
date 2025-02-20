@@ -18,13 +18,7 @@ export function Theme() {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return (
-      <span className="bg-(--wash2) w-24 h-8 rounded-full text-transparent ml-auto animate-pulse" />
-    );
-  }
-
-  return (
+  return mounted ? (
     <form className="flex items-center rounded-full ml-auto shadow-[0_0_0_1px_var(--wash1)]">
       {items.map((mode) => (
         <label className="peer cursor-pointer" key={mode.name}>
@@ -47,5 +41,7 @@ export function Theme() {
         </label>
       ))}
     </form>
+  ) : (
+    <span className="bg-(--wash2) w-24 h-8 rounded-full text-transparent ml-auto animate-pulse" />
   );
 }

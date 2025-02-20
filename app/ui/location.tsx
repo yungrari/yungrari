@@ -1,14 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import useSWR from "swr";
 import { GlobeIcon } from "@radix-ui/react-icons";
+import useSWR from "swr";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-const getTemperature = (latitude: string, longitude: string) =>
-  latitude && longitude
-    ? `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code`
+const getTemperature = (coordinates: string) =>
+  coordinates
+    ? `https://api.open-meteo.com/v1/forecast?latitude=${
+        coordinates.split(",")[0]
+      }&longitude=${
+        coordinates.split(",")[1]
+      }&current=temperature_2m,weather_code`
     : null;
 
 const getCookie = (name: string) =>
@@ -20,18 +24,16 @@ const getCookie = (name: string) =>
     : "";
 
 export function Location() {
-  const [latitude, setLatitude] = useState("");
-  const [longitude, setLongitude] = useState("");
+  const [coordinates, setCoordinates] = useState("");
 
   useEffect(() => {
-    setLatitude(getCookie("latitude"));
-    setLongitude(getCookie("longitude"));
+    setCoordinates(getCookie("coordinates"));
   }, []);
 
   const {
     data: { current: { temperature_2m: temperature } = {} } = {},
     error,
-  } = useSWR(getTemperature(latitude, longitude), fetcher);
+  } = useSWR(getTemperature(coordinates), fetcher);
 
   if (error) {
     return null;

@@ -7,8 +7,7 @@ export function middleware(request: NextRequest) {
   const geo = geolocation(request);
 
   if (geo.latitude && geo.longitude) {
-    response.cookies.set("latitude", geo.latitude);
-    response.cookies.set("longitude", geo.longitude);
+    response.cookies.set(`coordinates`, `${geo.latitude},${geo.longitude}`);
   }
 
   return response;
