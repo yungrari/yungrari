@@ -27,7 +27,7 @@ export function Location() {
   const [coordinates, setCoordinates] = useState("");
 
   useEffect(() => {
-    setCoordinates(getCookie("coordinates"));
+    setCoordinates(decodeURIComponent(getCookie("coordinates")));
   }, []);
 
   const {
