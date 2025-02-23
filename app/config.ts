@@ -58,7 +58,7 @@ export default {
             href: "https://www.patrianna.com",
             title: "Software Engineer at PATRIANNA",
           },
-          text: "Improved workflows by implementing customizable and isolated UI. Mentored developers and contributed to team processes. Consistently optimized Core Web Vitals and improved performance.",
+          text: "Improved workflows by implementing customizable and isolated UI.\nMentored developers and contributed to team processes.\nConsistently optimized Core Web Vitals and improved performance.",
         },
         {
           id: "work-amo",
@@ -67,7 +67,7 @@ export default {
             href: "https://amo.tech",
             title: "Software Engineer at AMO",
           },
-          text: "Led the architecture of a complex website using Next.js and TypeScript. Developed a comprehensive design system documented with Storybook. Integrated purchase mechanics with PayPal, Google Pay, and Apple Pay.",
+          text: "Led the architecture of a complex website using Next.js and TypeScript.\nDeveloped a comprehensive design system documented with Storybook.\nIntegrated purchase mechanics with PayPal, Google Pay, and Apple Pay.",
         },
         {
           id: "work-iwis",
@@ -76,7 +76,7 @@ export default {
             href: "https://iwis.io/en",
             title: "Software Engineer at IWIS",
           },
-          text: "Built dashboards with a focus on charts and data visualization. Developed mobile-first progressive web applications.",
+          text: "Built dashboards with a focus on charts and data visualization.\nDeveloped mobile-first progressive web applications.",
         },
         {
           id: "work-galagan",

@@ -19,7 +19,7 @@ function Unit({ name, link, text }: Partial<Block>) {
         </a>
       )}
 
-      {text && <p className="text-(--grey2)">{text}</p>}
+      {text && <p className="text-(--grey2) whitespace-pre-line">{text}</p>}
     </li>
   );
 }
